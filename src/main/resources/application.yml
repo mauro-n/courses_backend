@@ -1,0 +1,19 @@
+spring:
+  sql:
+    init:
+      mode: always
+  application:
+    name: com
+  datasource:
+    url: jdbc:mysql://localhost:3307/udemy
+    username: root
+    password: ${MYSQL_PASS}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
